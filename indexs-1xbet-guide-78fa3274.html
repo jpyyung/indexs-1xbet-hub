@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>了解 1xbet · 查询与对照</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f8fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e1f22;
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+        }
+
+        /* 顶部导航 */
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 0 0.8rem;
+            border-bottom: 1px solid #e6e8ec;
+            margin-bottom: 2.5rem;
+        }
+
+        .nav-brand {
+            font-weight: 500;
+            font-size: 1.05rem;
+            letter-spacing: 0.02em;
+            color: #2a2c30;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a4e57;
+            transition: color 0.15s;
+        }
+
+        .nav-links a:hover {
+            color: #0057b3;
+        }
+
+        /* hero 摘要 */
+        .hero-note {
+            margin-bottom: 2.8rem;
+        }
+
+        .hero-note h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+            color: #141517;
+        }
+
+        .hero-note .sub {
+            font-size: 1rem;
+            color: #5a5e69;
+            max-width: 580px;
+        }
+
+        .hero-note .sub strong {
+            color: #1a1c20;
+            font-weight: 500;
+        }
+
+        /* 卡片场景区 */
+        .scenes {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            margin: 2.4rem 0 2.8rem;
+        }
+
+        .scene-item {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            border: 1px solid #eef0f2;
+            transition: box-shadow 0.2s;
+        }
+
+        .scene-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .scene-item h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #1b1d22;
+        }
+
+        .scene-item p {
+            font-size: 0.9rem;
+            color: #4b4f59;
+            margin-bottom: 0.15rem;
+        }
+
+        .scene-item .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            background: #eef1f5;
+            border-radius: 20px;
+            padding: 0.1rem 0.7rem;
+            margin-top: 0.4rem;
+            color: #3b3f4a;
+        }
+
+        /* 常见说明 / FAQ 摘要 */
+        .faq-mini {
+            margin: 2.2rem 0 2.6rem;
+        }
+
+        .faq-mini h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            color: #1b1d22;
+            letter-spacing: -0.01em;
+        }
+
+        .faq-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            padding: 0.9rem 0;
+            border-bottom: 1px solid #e9ebee;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #1f2126;
+        }
+
+        .faq-a {
+            font-size: 0.9rem;
+            color: #585d68;
+            padding-right: 0.5rem;
+        }
+
+        .faq-a a {
+            color: #0057b3;
+            text-decoration: none;
+            font-weight: 400;
+            border-bottom: 1px solid transparent;
+        }
+
+        .faq-a a:hover {
+            border-bottom-color: #0057b3;
+        }
+
+        /* 延伸阅读区域 */
+        .extras {
+            background: #f0f2f5;
+            border-radius: 14px;
+            padding: 1.2rem 1.5rem;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .extras p {
+            font-size: 0.9rem;
+            color: #40444f;
+            margin-bottom: 0.3rem;
+        }
+
+        .extras .ref-link {
+            font-weight: 450;
+            color: #1f232a;
+        }
+
+        .extras a {
+            color: #0057b3;
+            text-decoration: none;
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+        .extras a:hover {
+            border-bottom-color: #0057b3;
+        }
+
+        /* footer */
+        .footer-note {
+            font-size: 0.75rem;
+            color: #787d89;
+            border-top: 1px solid #e2e5ea;
+            padding-top: 1.5rem;
+            margin-top: 1rem;
+            text-align: left;
+            letter-spacing: 0.01em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 540px) {
+            .page {
+                padding: 1rem 1.2rem;
+            }
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+            .hero-note h1 {
+                font-size: 1.7rem;
+            }
+            .scene-item {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .nav-bar {
+                flex-wrap: wrap;
+                gap: 0.3rem;
+            }
+            .hero-note h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- 导航 -->
+        <div class="nav-bar">
+            <span class="nav-brand">查询·对照</span>
+            <div class="nav-links">
+                <a href="#scenes">场景</a>
+                <a href="#faq">说明</a>
+                <a href="#">延伸</a>
+            </div>
+        </div>
+
+        <!-- hero 摘要 -->
+        <div class="hero-note">
+            <h1>1xbet · 日常查询与对照</h1>
+            <div class="sub">
+                从信息检索、页面对照到细节延伸，<strong>1xbet</strong> 相关的内容整理为三个常见切入场景。以下模块基于日常使用中频率较高的查询类型，不做过度解读，只提供简明结构化参考。
+            </div>
+        </div>
+
+        <!-- 三个场景模块 -->
+        <div class="scenes" id="scenes">
+            <div class="scene-item">
+                <h3>❶ 页面结构对照</h3>
+                <p>在访问平台时，经常需要对比不同板块的布局与信息层级。比如导航栏、赛事模块、帮助中心入口的位置差异。保持对页面框架的观察，有助于快速定位功能。</p>
+                <span class="tag">布局 · 导航</span>
+            </div>
+            <div class="scene-item">
+                <h3>❷ 条款与数值摘要</h3>
+                <p>涉及优惠活动、最低投注额、提现周期等字段，许多用户需要反复核对原始页面上的数字描述。建议以官方原文为准，这里仅提炼常见关注点。</p>
+                <span class="tag">数据 · 规则</span>
+            </div>
+            <div class="scene-item">
+                <h3>❸ 延伸条目索引</h3>
+                <p>从特定术语出发查找相关解释，例如「累积奖金」「投注类型代码」「账户验证流程」。通过关键词对照可以提升信息检索效率。</p>
+                <span class="tag">术语 · 索引</span>
+            </div>
+        </div>
+
+        <!-- 常见说明 FAQ 摘要 -->
+        <div class="faq-mini" id="faq">
+            <h2>常见说明摘要</h2>
+            <div class="faq-item">
+                <span class="faq-q">如何确认当前页面为最新版本？</span>
+                <span class="faq-a">建议直接通过 <a href="https://indexs-1xbet.com">1xbet</a> 主站地址访问，并核对浏览器地址栏域名。第三方聚合信息可能存在更新延迟。</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-q">多个镜像或备用域名如何鉴别？</span>
+                <span class="faq-a">官方渠道通常只在帮助中心提供备用链接。任何需要额外个人信息的页面均需提高警惕。日常查询以 <a href="https://indexs-1xbet.com">1xbet</a> 基础结构为参照。</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-q">不同语言版本之间内容有差异吗？</span>
+                <span class="faq-a">部分条款或活动可能因地区调整，建议以对应语言界面为准。对照阅读时可使用浏览器翻译，但关键数字仍需查看原文。</span>
+            </div>
+        </div>
+
+        <!-- 延伸阅读 -->
+        <div class="extras">
+            <p class="ref-link">延伸 · 对照参考</p>
+            <p>除直接浏览 <a href="https://indexs-1xbet.com">1xbet</a> 之外，可结合常见信息聚合页面进行术语与数值的交叉比对。以下为部分非官方整理线索：</p>
+            <p style="margin-top: 0.5rem;">— 投注类型对照表（单式 / 串关 / 系统投注）<br>— 账户层级与验证材料清单<br>— 优惠活动有效期与流水要求速览</p>
+            <p style="margin-top: 0.5rem;">上述摘要仅为索引提示，详细定义请始终参照原始页面。</p>
+        </div>
+
+        <!-- footer -->
+        <div class="footer-note">
+            页面内容为独立整理，用于信息对照与查询辅助。<br>
+            所有表述均基于公开信息，不构成任何形式的指引或推荐。
+        </div>
+    </div>
+</body>
+</html>
