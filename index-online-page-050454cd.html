@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK体育 · 信息卡片</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f2f5f9;
+            color: #1e2a3a;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f44 60%, #243b4f 100%);
+            color: #eef3f8;
+            padding: 64px 24px 56px;
+            text-align: center;
+            border-bottom: 4px solid #2d7a5e;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .hero p {
+            max-width: 640px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #2d7a5e;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 4px 16px;
+            border-radius: 30px;
+            margin-top: 18px;
+            letter-spacing: 0.3px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+        .intro-paragraph {
+            background: white;
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+        }
+        .intro-paragraph p {
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+        .intro-paragraph p:last-child {
+            margin-bottom: 0;
+        }
+        .accent-link {
+            color: #1c6b4f;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1.5px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .accent-link:hover {
+            border-bottom-color: #1c6b4f;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            margin-bottom: 48px;
+        }
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 28px 24px 30px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+            transition: transform 0.15s, box-shadow 0.2s;
+            border-top: 4px solid #d0dae8;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+        }
+        .card .emoji-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+            color: #0b1a2e;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #2f3e4e;
+            margin-bottom: 6px;
+        }
+        .card ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        .card li {
+            font-size: 0.92rem;
+            padding: 4px 0 4px 20px;
+            position: relative;
+            color: #2f3e4e;
+        }
+        .card li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #2d7a5e;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 48px 0 18px;
+            color: #0b1a2e;
+            border-left: 5px solid #2d7a5e;
+            padding-left: 18px;
+        }
+        .faq-summary {
+            background: white;
+            border-radius: 16px;
+            padding: 24px 28px 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            margin: 32px 0 40px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e6edf4;
+            padding: 16px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #1a2f44;
+            margin-bottom: 4px;
+        }
+        .faq-a {
+            font-size: 0.95rem;
+            color: #395168;
+        }
+        .note-footer {
+            text-align: center;
+            padding: 28px 16px 20px;
+            border-top: 1px solid #dbe2ec;
+            color: #4f637b;
+            font-size: 0.9rem;
+            background: #f2f5f9;
+        }
+        .note-footer a {
+            color: #1c6b4f;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .note-footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .intro-paragraph { padding: 24px 18px; }
+            .card-grid { gap: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 -->
+    <header class="hero">
+        <h1>MK体育</h1>
+        <p>信息卡片 · 再度访问 · 持续关注</p>
+        <span class="badge">收藏 · 回顾 · 熟悉入口</span>
+    </header>
+
+    <div class="container">
+
+        <!-- 自然链接段落：从再次访问、收藏的角度展开 -->
+        <div class="intro-paragraph">
+            <p>
+                当一位用户选择再次打开一个体育信息站点，往往意味着信任与习惯的沉淀。
+                <strong>MK体育</strong> 所提供的赛事动态、数据摘要与内容梳理，正是为了满足这种反复查看的需求。
+                若你已通过书签或历史记录回到这里，会发现页面结构保持清晰，卡片化的布局让浏览更聚焦。
+            </p>
+            <p>
+                许多访客会将 <a href="https://index-online-mksports.com" class="accent-link">MK体育</a> 存入浏览器收藏夹，以便在赛季密集期或休赛期快速获取要点。
+                不需要反复搜索，也不需要记住冗长的地址——一次收藏，持续触及。这也是我们坚持信息卡片式呈现的出发点之一。
+            </p>
+            <p>
+                页面右侧没有杂乱的弹窗，核心内容围绕用途、人群与常见问题展开。
+                对于希望保持低干扰、高密度阅读节奏的用户，这种结构能减少跳转次数，把注意力留在内容本身。
+            </p>
+        </div>
+
+        <!-- 用途卡片 + 适合人群卡片 -->
+        <div class="card-grid">
+            <div class="card">
+                <span class="emoji-icon">📋</span>
+                <h3>用途 · 场景</h3>
+                <p>快速了解赛事近况、赛果整理、队伍与选手索引。适合以下场景：</p>
+                <ul>
+                    <li>赛前查看交锋记录与近期状态</li>
+                    <li>赛后浏览精简战报与数据摘要</li>
+                    <li>关注特定联赛或杯赛的积分变化</li>
+                    <li>通过收藏夹随时返回，无需重复搜索</li>
+                </ul>
+            </div>
+            <div class="card">
+                <span class="emoji-icon">👥</span>
+                <h3>适合人群</h3>
+                <p>信息密度较高的体育内容整理，更适合：</p>
+                <ul>
+                    <li>定期追踪多项赛事的资深爱好者</li>
+                    <li>偏好文字摘要而非视频直播的用户</li>
+                    <li>需要快速获取关键数据的分析型读者</li>
+                    <li>习惯使用书签栏管理常用站点的收藏者</li>
+                </ul>
+            </div>
+            <div class="card">
+                <span class="emoji-icon">🔖</span>
+                <h3>持续关注</h3>
+                <p>将页面加入浏览器书签或移动端主屏幕后，每次访问都能直接看到更新后的内容卡片。</p>
+                <ul>
+                    <li>页面结构保持相对稳定，降低重新适应成本</li>
+                    <li>卡片区块按主题划分，可快速定位感兴趣的部分</li>
+                    <li>强调色链接用于跳转至 <a href="https://index-online-mksports.com" class="accent-link">MK体育</a> 主页面</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FAQ 摘要（简洁版） -->
+        <div class="faq-summary">
+            <h3 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 6px;">常见问题摘要</h3>
+            <div class="faq-item">
+                <div class="faq-q">Q：页面内容多久更新一次？</div>
+                <div class="faq-a">核心卡片与摘要会随赛事周期保持同步，但具体更新节奏请以实际呈现为准。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：如何更便捷地回到这个页面？</div>
+                <div class="faq-a">推荐使用浏览器收藏夹功能，或直接记住主页地址 <a href="https://index-online-mksports.com" style="color:#1c6b4f;font-weight:500;">MK体育</a> 。移动端可添加到主屏幕。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：信息卡片是否会频繁改变布局？</div>
+                <div class="faq-a">卡片主题与分类在较长时间内保持一致，以利于再次访问时快速定位。</div>
+            </div>
+        </div>
+
+        <!-- 自然结尾段，不含诱导 -->
+        <p style="font-size: 0.95rem; color: #36506b; margin-top: 20px; max-width: 700px;">
+            持续关注 <strong>MK体育</strong> 的方式有很多：添加书签、保持页面标签、或通过常用设备直接访问。
+            本次介绍围绕信息卡片结构展开，希望能为再次到来的用户提供稳定的浏览体验。
+        </p>
+
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="note-footer">
+        <p style="margin-bottom: 6px;">
+            <a href="https://index-online-mksports.com">MK体育</a> · 信息卡片式介绍页
+        </p>
+        <p style="opacity: 0.75;">内容仅供示意，不构成承诺或诱导</p>
+    </footer>
+
+</body>
+</html>
